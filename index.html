@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //array intialization & creation
+        var arr = [1,5,2,3,1,4,2,6,8]
+        console.log(arr);
+        //array length
+        console.log("length of the array"+arr.length);
+        //array index
+        console.log("element in 0 index is "+arr[0]);
+        console.log("element in 1 index is "+arr[1]);
+        //array manipulation (adding elements)
+        arr.push(5);
+        console.log("using push"+arr);
+        arr.unshift(9);
+        console.log("using unshift"+arr);
+        //array manipulation(removing elements)
+        arr.pop();
+        console.log("using pop"+arr);
+        arr.shift();
+        console.log("using shift"+arr);
+        //array searching
+        console.log("finding the index of element 4 "+arr.indexOf(4));
+        //array filtering
+        let evenNum = arr.filter(arr => arr % 2 == 0);
+        console.log("Printing the even numbers in the array "+evenNum);
+        //array sorting
+        arr.sort();
+        console.log("Sorted array"+arr);
+        //array reverse
+        arr.reverse();
+        console.log("Reverse of the array"+arr);
+        //array maximum and minimum
+        console.log("Largest Number in the array is "+Math.max(...arr));
+        console.log("smallest Number in the array is "+Math.min(...arr));
+        //checking array element
+        let target=5;
+        for(let i=0;i<arr.length;i++)
+    {
+        if(arr[i]==target)
+        {
+            console.log("Element found");
+            break;
+        }
+           
+    }
+    //array spreading
+    let arr1=[1,2,3,4,5,6,7,8]
+    let arr2=[9,10,11,12,13,14,15,16]
+    let arr3=[...arr1,...arr2];
+    console.log("Spreading the array "+arr3);
+    //array joining
+    let arr4=arr.join(" ")
+    console.log("including the space in the array "+arr4);
+    //array spliting
+    let arr5=arr4.split(" ")
+    console.log("Splitting the array "+arr5);
+    //array mapping
+    let arr6=arr5.map(arr=>arr*2)
+    console.log("Mapping the array "+arr6);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
