@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //array deduplication
+        const arr = [1, 2, 3, 4, 5,3,1,2]
+        const dedup = [...new Set(arr)];
+        console.log(dedup);
+        //finding intersection of two array
+        const arr1 = [1, 2, 3, 4, 5];
+        const arr2 = [1, 8, 3, 4, 9];
+        const intersection = arr1.filter(x => arr2.includes(x));
+        console.log("intersecton of two arrays "+intersection);
+        //finding union of two array
+        const union = [...new Set([...arr1, ...arr2])];
+        console.log("Union of two arrays "+union);
+        //finding difference between two arrays
+        const difference = union.filter(x => !intersection.includes(x));
+        console.log("Difference between two arrays "+difference);
+        //removing array item by index
+        const arr3 = [1, 2, 3, 4, 5];
+        const removedItem = arr3.splice(2, 1);
+        console.log("Removed item "+removedItem);
+        console.log("after removing items "+arr3);
+        //checking array element
+        let target=5;
+        for(let i=0;i<arr.length;i++)
+        {
+        if(arr[i]==target)
+        {
+            console.log("Element found at index of "+i);
+            break;
+        }     
+        }
+
+    </script>
+</body>
+</html>
